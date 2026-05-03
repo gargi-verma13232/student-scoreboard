@@ -40,7 +40,7 @@ https://studentscoreboardx.netlify.app/
 ---
 
 ## Folder Structure
-
+<pre>
 student-scoreboard/
 ├── public/
 ├── src/
@@ -55,7 +55,7 @@ student-scoreboard/
 ├── index.html
 ├── vite.config.js
 └── package.json
-
+</pre>
 
 ---
 
