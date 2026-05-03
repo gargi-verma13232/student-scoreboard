@@ -1,16 +1,81 @@
-# React + Vite
+# 🎓 Student Scoreboard — React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully functional student score management application built with React and Vite. Student Scoreboard offers a seamless experience to track, update, add, and remove student records with real-time pass/fail evaluation and a stunning dark theme.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+https://studentscoreboardx.netlify.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![alt text](image.png)
+
+---
+
+## Features
+
+- **Student Records Table** — View all students with ID, name, score, and status in a clean table
+- **Score Update** — Edit any student's score and click SAVE to apply changes instantly
+- **Add Student** — Register new students with name and score via a validated form
+- **Remove Student** — Delete any student record instantly with the ✕ button
+- **Pass / Fail Status** — Auto-evaluated badge — Pass ≥ 40, Fail < 40
+- **Live Stats Bar** — Real-time Total, Passing, and Failing counts
+- **Responsive Design** — Fully optimized for desktop, tablet, and mobile
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React + Vite | Frontend Framework & Build Tool |
+| JavaScript (JSX) | Component Logic & Interactivity |
+| Pure CSS | UI Styling, Animations & Responsive Layout |
+| useState / useEffect | State Management & Side Effects |
+
+---
+
+## Folder Structure
+
+student-scoreboard/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── StudentTable.jsx
+│   │   ├── StudentRow.jsx
+│   │   └── AddStudentForm.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── vite.config.js
+└── package.json
+
+
+---
+
+## Component Overview
+
+| Component | Description |
+|---|---|
+| `Header.jsx` | App title and subtitle branding |
+| `StudentTable.jsx` | Full student records table with entry count |
+| `StudentRow.jsx` | Reusable row — score input, save, and remove |
+| `AddStudentForm.jsx` | Validated form to register new students |
+| `App.jsx` | Root component — manages all state and handlers |
+
+---
+
+## State Management
+
+All state is managed in `App.jsx` using React's `useState` hook and passed to child components via props following unidirectional data flow.
+
+| State | Type | Description |
+|---|---|---|
+| `students` | Array | List of all student objects `{ id, name, score }` |
+| `nextId` | Number | Auto-incrementing ID for new students |
